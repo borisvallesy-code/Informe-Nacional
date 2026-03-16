@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Portal de Noticias</title>
+
+<link rel="stylesheet" href="estilos.css">
+
+<script>
+
+function cargarPagina(pagina){
+
+fetch(pagina)
+.then(res => res.text())
+.then(data => {
+document.getElementById("contenido").innerHTML = data;
+});
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Informe Nacional</h1>
+<p>Noticias del Perú y el mundo</p>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="#" onclick="cargarPagina('inicio.html')">Inicio</a></li>
+<li><a href="#" onclick="cargarPagina('nacionales.html')">Nacionales</a></li>
+<li><a href="#" onclick="cargarPagina('deportes.html')">Deportes</a></li>
+<li><a href="#" onclick="cargarPagina('espectaculos.html')">Espectáculos</a></li>
+<li><a href="#" onclick="cargarPagina('cultura.html')">Cultura</a></li>
+<li><a href="#" onclick="cargarPagina('contacto.html')">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+<div class="contenedor">
+
+<div id="contenido">
+
+<!-- SLIDER -->
+
+<div class="slider">
+
+<div class="slides">    
+
+<img src="imagenes/inicio/imagen 1.png">
+<img src="imagenes/inicio/imagen 2.png">
+<img src="imagenes/inicio/img 3.png">
+
+</div>
+
+</div>
+
+<h2>Últimas Noticias</h2>
+
+<div class="noticias">
+
+<div class="noticia">
+
+<img src="imagenes/inicio/img 1.jpg">
+
+<h3>Economía nacional en crecimiento</h3>
+
+<p>Especialistas analizan el desarrollo económico del país.</p>
+
+</div>
+
+<div class="noticia">
+
+<img src="imagenes/inicio/img 2.jpg">
+
+<h3>Festival cultural</h3>
+
+<p>Evento cultural reúne artistas de todo el país.</p>
+
+</div>
+
+<div class="noticia">
+
+<img src="imagenes/inicio/img 3.jpg">
+
+<h3>Campeonato nacional</h3>
+
+<p>Resultados de los partidos más importantes.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Portal de Noticias</p>
+
+</footer>
+
+</body>
+
+</html>
